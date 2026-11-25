@@ -26,7 +26,7 @@ export type Locale = keyof typeof LANGUAGES;
 // yet: their file in locales/ gets every new text (npm run i18n), but the
 // language joins LANGUAGES only once most of it is translated (about 80 %) –
 // until then nobody sees a half-English interface. Russian joined in #422.
-export const IN_TRANSLATION: readonly string[] = [];
+export const IN_TRANSLATION: readonly string[] = ["pt-BR"];
 // The language of the texts: "en-US" → "en".
 export type TextLocale = Exclude<Locale, `${string}-${string}`>;
 // The language path of docs.flowplan.org for a UI language (#367): German,

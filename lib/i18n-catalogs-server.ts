@@ -20,6 +20,12 @@ const loaders: Record<string, () => Promise<{ default: Catalog }>> = {
   fr: () => import("../locales/fr.json", { with: { type: "json" } }),
   zh: () => import("../locales/zh.json", { with: { type: "json" } }),
   ru: () => import("../locales/ru.json", { with: { type: "json" } }),
+  // pt-BR (rodada Turi): em IN_TRANSLATION (lib/i18n.ts), não em LANGUAGES
+  // ainda -- cobertura real ~2% (node scripts/i18n.mjs --check), bem abaixo
+  // dos ~80% que o próprio projeto exige antes de oferecer um idioma ao
+  // público (ver comentário em lib/i18n.ts). O loader fica pronto pra
+  // quando a tradução avançar.
+  "pt-BR": () => import("../locales/pt-BR.json", { with: { type: "json" } }),
 };
 export const SERVER_CATALOGS: readonly string[] = Object.keys(loaders);
 
