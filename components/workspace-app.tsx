@@ -4542,8 +4542,8 @@ export default function WorkspaceApp({
             }}
           >
             <TuriFlameIcon size={28} />
-            <span>flowplan</span>
-            <span className="brand-turi" aria-hidden="true">turi</span>
+            <img src="/turi-logo.png" alt="turi" className="brand-turi-logo" />
+            <span className="brand-flowplan">flowplan</span>
             {boot.instance?.name && (
               <small className="instance-name">{boot.instance.name}</small>
             )}
