@@ -17311,6 +17311,21 @@ pre,
 .brand > span:first-of-type {
   transform: translateY(-1px);
 }
+/* The companion "turi" mark next to "flowplan" (hub turi integration):
+   lowercase, muted, set off by the sidebar's own border color rather than
+   a brand color, so it reads as a quiet signature, not a second logotype. */
+.brand-turi {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  margin-left: 1px;
+  padding-left: 9px;
+  border-left: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
 .login-brand {
   font-size: 23px;
 }

@@ -17,7 +17,7 @@ import { LOCALE_TAG, tr } from "@/lib/locale-tag";
 import { useLocale, useT, writeLocaleCookie } from "./i18n";
 import { OfflineStatus } from "./offline-status";
 import { SaveStatusBadge, useSaveStatusStore } from "./save-status-badge";
-import { BrandMark } from "./brand-mark";
+import { TuriFlameIcon } from "./turi-flame-icon";
 import { CoverFrame } from "./cover-frame";
 import { clearPlaceholders } from "./image-placeholder";
 import { holdViewTransitions, transitionView, withoutViewTransition } from "@/lib/view-transition";
@@ -4541,8 +4541,9 @@ export default function WorkspaceApp({
               go("home");
             }}
           >
-            <BrandMark size={28} />
+            <TuriFlameIcon size={28} />
             <span>flowplan</span>
+            <span className="brand-turi" aria-hidden="true">turi</span>
             {boot.instance?.name && (
               <small className="instance-name">{boot.instance.name}</small>
             )}
